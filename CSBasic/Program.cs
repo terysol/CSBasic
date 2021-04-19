@@ -140,6 +140,19 @@ namespace CSBasic
             Console.WriteLine(number);
             Console.WriteLine(number);
 
+            int _int = 273;
+            long _long = 3493749738;
+            float _float = 52.34F;
+            char _char = '글';
+            string _string = "문자열 ";
+
+            Console.WriteLine(_int.GetType());
+            Console.WriteLine(_long.GetType());
+            Console.WriteLine(_float.GetType());
+            Console.WriteLine(_char.GetType());
+            Console.WriteLine(_string.GetType());
+            Console.WriteLine((2211111111L).GetType());
+
         }
     }
 }
