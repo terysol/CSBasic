@@ -11,8 +11,8 @@ namespace CSBasic
         static void Main(string[] args)
         {
             var name = "김" + "솔" + "민";
-          /*  Console.Write("개행이 안되는  친구");
-            Console.WriteLine("개행이 되는 친구");*/
+            /*  Console.Write("개행이 안되는  친구");
+              Console.WriteLine("개행이 되는 친구");*/
 
             // string do= "안되는 거";
             var alpha = "알파";
@@ -23,7 +23,7 @@ namespace CSBasic
 
             // 출력
             Console.WriteLine("개행이 되는 출력");
-          /*  Console.Write("개행이 안되는 출력");*/
+            /*  Console.Write("개행이 안되는 출력");*/
 
             // 정수 자료형
             Console.WriteLine(52);   // 기본 자료형은 정수형
@@ -34,7 +34,7 @@ namespace CSBasic
 
             Console.WriteLine(10 / 5);
             Console.WriteLine(10 % 5);
-            Console.WriteLine(7%3);
+            Console.WriteLine(7 % 3);
 
             // Real Number
             Console.WriteLine(52.276);
@@ -83,7 +83,7 @@ namespace CSBasic
             //Comparison operator
             // == 1.!= <, >= 
             Console.WriteLine(62 < 273);
-            Console.WriteLine(DateTime.Now.Hour<3 || 8<DateTime.Now.Hour);
+            Console.WriteLine(DateTime.Now.Hour < 3 || 8 < DateTime.Now.Hour);
 
             // Integer overflow
             int a = 2147483647;
@@ -100,6 +100,27 @@ namespace CSBasic
             Console.WriteLine("double: " + sizeof(double));
             Console.WriteLine("char: " + sizeof(char));
             Console.WriteLine("bool: " + sizeof(bool));
+
+
+            bool TrueOrFalse = true;
+
+            int output = 0;
+            output += 52;
+            output += 273;
+            output += 103;
+
+            Console.WriteLine(output);
+
+            output *= 2;
+            Console.WriteLine(output);
+
+            // 문자열 관련 복합 대입 연산자
+            string str = "Hello";
+            str += "World";
+            str += "!";
+
+            Console.WriteLine(str);
+
         }
     }
 }
