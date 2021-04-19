@@ -8,6 +8,9 @@ namespace CSBasic
 {
     class Program
     {
+        string Var="테스트";
+        //var something = "아하하";   -> 불가능
+
         static void Main(string[] args)
         {
             var name = "김" + "솔" + "민";
@@ -152,6 +155,11 @@ namespace CSBasic
             Console.WriteLine(_char.GetType());
             Console.WriteLine(_string.GetType());
             Console.WriteLine((2211111111L).GetType());
+
+            var number3 = 100;   // 할당되는 값에 따라서 자료형을 정해준다. 타입 변경 불가능
+            // var number4;  -> 에러 남. 초기화도 해줘야 함. 
+            var number5 = 100.0;
+            var number6 = 100.0F;
 
         }
     }
