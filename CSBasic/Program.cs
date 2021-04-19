@@ -84,6 +84,22 @@ namespace CSBasic
             // == 1.!= <, >= 
             Console.WriteLine(62 < 273);
             Console.WriteLine(DateTime.Now.Hour<3 || 8<DateTime.Now.Hour);
+
+            // Integer overflow
+            int a = 2147483647;
+            int b = 1;
+            Console.WriteLine(a + b);
+
+            double c = 52.263;
+            char d = '아';
+
+            // sizeof
+            Console.WriteLine("int: " + sizeof(int));
+            Console.WriteLine("long: " + sizeof(long));
+            Console.WriteLine("float: " + sizeof(float));
+            Console.WriteLine("double: " + sizeof(double));
+            Console.WriteLine("char: " + sizeof(char));
+            Console.WriteLine("bool: " + sizeof(bool));
         }
     }
 }
