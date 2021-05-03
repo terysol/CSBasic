@@ -50,15 +50,15 @@ namespace CSBasic3
                 }
             } while (input != "exit");
 
-            /*or (int i2 = '가'; i2 <= '힣'; i2++)
+            /*for (int i2 = '가'; i2 <= '힣'; i2++)
             {
                 Console.Write((char)i2);
             }*/
 
-            for(int i= intArray3.Length-1; i >= 0; i--)
+            /*for(int i= intArray3.Length-1; i >= 0; i--)
             {
                 Console.WriteLine(intArray3[i]);
-            }
+            }*/
         }
     }
 }
