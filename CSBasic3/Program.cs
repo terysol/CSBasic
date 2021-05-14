@@ -83,6 +83,8 @@ namespace CSBasic3
                     Console.WriteLine('*');
                 Console.WriteLine('\n');
             }
+
+                
         }
     }
 }
