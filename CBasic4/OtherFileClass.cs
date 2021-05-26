@@ -8,6 +8,5 @@ namespace CBasic4
 {
     class OtherFileClass
     {
-
     }
 }

@@ -6,6 +6,26 @@ using System.Threading.Tasks;
 
 namespace CBasic4
 {
+    class MyMath
+    {
+        public int a;
+        public static double PI = 3.141592;
+        public static void Hello()
+        {
+            // a = 3; 접근 안됨
+            Console.WriteLine("Greeting~");
+        }
+    }
+    class Product
+    {
+        public string name = "defalut";
+        public int price = 1000;
+
+        public override string ToString()
+        {
+            return this.name + " / " + this.price; 
+        }
+    }
     class Car
     {
         // C# 기본세팅은 private
@@ -60,6 +80,14 @@ namespace CBasic4
             Console.WriteLine(Math.Round(45.78));
 
             Product product = new Product();
+            Console.WriteLine(product);
+            Product productA = new Product() { name="감자",price=2000};
+            Console.WriteLine(productA.ToString());
+            Product productB = new Product() { name="고구마",price=3000};
+            Console.WriteLine(productB.ToString());        // product라고 만 나옴.
+
+            Console.WriteLine(MyMath.PI);
+            MyMath.Hello();
 
         }
     }
