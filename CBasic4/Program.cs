@@ -105,7 +105,33 @@ namespace CBasic4
                 new Student() { name = "사람", grade = 1 },
                 new Student() { name = "기본", grade = 2 },
                 new Student() { name = "김솔민", favorityFood = "치킨" },
-        };
+            };
+
+            foreach(var item in students)
+            {
+                Console.WriteLine(item.name + ":" + item.grade);
+            }
+
+            /*for(int i = 0; i < list.Count; i++)
+            {
+                if(students[i].grade > 0)
+                {
+                    students.RemoveAt(i);
+                    i--;
+                }
+            }*/
+
+            for(int i = students.Count - 1; i >= 0; i--)
+            {
+                if(students[i].grade > 0)
+                {
+                    students.RemoveAt(i);
+                }
+            }
+            foreach (var item in students)
+            {
+                Console.WriteLine(item.name + ":" + item.grade);
+            }
         }
     }
     
