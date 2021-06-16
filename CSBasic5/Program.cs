@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace CSBasic5
 {
     class Program
@@ -51,7 +53,7 @@ namespace CSBasic5
         class Product
         {
             public static int counter = 0;
-            public int id;
+            public readonly int id;     // 생성자에서만 딱 1번 변경 가능.
             public string name;
             public int price;
 
@@ -59,8 +61,16 @@ namespace CSBasic5
             {
                 Product.counter = Product.counter + 1;
                 this.id = Product.counter;
+                // this.id = ++Product.counter;     // 사용 x
                 this.name = name;
                 this.price = price;
+            }
+
+            ~Product()
+            {
+                // 소멸자(Destructor) ~(틸드)  -> 프로그램이 종료될 때 
+                Console.WriteLine(this + "의 소멸자 호출되었습니다. ");
+                Console.WriteLine(this.name + "曰 : \"안녕히 계세요 여러분 ~\"");
             }
 
             public override string ToString()
