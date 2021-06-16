@@ -39,7 +39,67 @@ namespace CSBasic5
             // 정적 생성자는 프로그램이 첫 실행될 때 처음만 실행이 된다.
             // 일반 생성자 -> 객체가 생성될 때 실행, 정적생성자 -> 클래스가 메모리에 처음 로드될 때 실행
             // 정적 생성자는 싱글턴 패턴 사용할 때 적합
+
+            Box box = new Box(10, 10);
+            box.Height = 100;
+            box.Width = 200;
+            box.Price = 3000;
+            Console.WriteLine("박스의 면적은 : " + box.Area);
         }
+
+        class Box
+        {
+            public int MyProperty { get; set; }   // prop tab키 두번
+            public int Price { get; set; }  // Property
+
+            private int width;
+            public int Width
+            {
+                get { return width; }
+                set
+                {
+                    if (value > 0) { this.width = value; }
+                    else
+                    {
+                        Console.WriteLine("너비는 양수를 입력해주세요.");
+                    }
+                }
+            }
+
+            private int height;
+            public int Height
+            {
+                get { return height; }
+                set
+                {
+                    if (value > 0) { this.height = value; }
+                    else
+                    {
+                        Console.WriteLine("너비는 양수를 입력해주세요.");
+                    }
+                }
+            }
+
+            public Box(int width, int height)
+            {
+                this.width = width;
+                this.height = height;
+            }
+
+            /*public int Area()
+            {
+                return this.width * this.height;
+            }*/
+
+            private int area;
+
+            public int Area
+            {
+                get { return this.width* this.height; }
+                
+            }
+        }
+       
 
         class Sample
         {
